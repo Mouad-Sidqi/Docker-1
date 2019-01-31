@@ -29,9 +29,11 @@ ONBUILD RUN bundle && bundle exec rake bootstrap
 # github
 
 
+####3working setup
+## building the first image that will be used by 2nd Dockerfile to build upon it, the point is making an env for a certain kind of app, to avoid resetting up the dependencies
+# FROM ruby 2.5.1
+# apt-get update && apt-get install -y vim nodejs=4.8.2~dfsg-1 && gem install rails:5.2.0 && git clone https://github.com/RailsApps/rails-signup-thankyou.git && bundle install &&  bundle install && bin/rails db:migrate RAILS_ENV=development && bundle exec rake db:setup
 
-##    apt-get update && apt-get install -y vim nodejs && git clone https://github.com/RailsApps/rails-signup-thankyou.git && bundle install &&  bundle exec rake db:setup
-## cd db_explorer/ && bundle install
 
 
 
