@@ -1,0 +1,10 @@
+FROM ruby:2.5.1
+
+
+RUN apt-get update && apt-get install -y vim \
+	nodejs=4.8.2~dfsg-1
+RUN gem install rails:5.2.0
+ONBUILD WORKDIR /opt/app
+ONBUILD COPY . .
+ONBUILD RUN bundle install
+#ONBUILD RUN bundle exec rake db:setup && bundle exec rake db:migrate 
