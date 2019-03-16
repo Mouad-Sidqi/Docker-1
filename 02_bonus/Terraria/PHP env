@@ -1,8 +1,0 @@
-FROM ubuntu
-RUN apt-get update && apt-get upgrade -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y apache2 vim git php
-ENTRYPOINT (service apache2 restart) && (bash)
-
-
-
-# docker run --rm --name PHP -it -v ~/Desktop/PHP:/var/www/html -p 443:443 -p 80:80 <image name>
