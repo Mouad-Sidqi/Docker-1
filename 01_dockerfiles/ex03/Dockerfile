@@ -28,7 +28,7 @@ CMD service ssh restart && (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab
 # git config --global http.sslVerify false
 
 
-# docker run -it -p 1337:22/tcp -p 80:80/tcp -p 443:443/tcp <image>
+# docker run -it -p 22:1337/tcp -p 80:80/tcp -p 443:443/tcp <image>
 # error
 # docker start <container>
 # sed -i 's|${http://gitlab\.example\.com}|${http://0\.0\.0\.0}|g' /etc/gitlab/gitlab.rb
